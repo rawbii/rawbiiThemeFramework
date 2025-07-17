@@ -1,32 +1,66 @@
 
 /**
  * @name rawbiiThemeFramework
- * @description A pastel pink + blue standalone Discord theme framework based on system24. No background image included by default. Charcoal gray base.
+ * @description Fully custom framework
  * @author rawbii
- * @version 1.0.1
+ * @version 1.1.0
  */
 
-/* Rawbii custom colors */
-:root {
+/* --- START: system24 UI logic --- */
+
+/* Simulated system24 UI logic — apply square corners, borders, loaders, etc */
+* {
+    box-sizing: border-box;
+  }
+  .container-1zzFcN,
+  .sidebar-1tnWFu,
+  .content-1SgpWY,
+  .scroller-3X7KbA,
+  .chat-2ZfjoI,
+  .panels-3wFtMD {
+    border-radius: 0px !important;
+    border: 2px solid var(--border, #555);
+    transition: border 0.2s ease;
+    background-color: var(--bg-3, #222) !important;
+  }
+  button {
+    border-radius: 0px !important;
+    background-color: var(--bg-2, #333) !important;
+    color: var(--text-1, #fff) !important;
+  }
+  .theme-dark {
+    background-color: var(--bg-4, #1a1a1a) !important;
+  }
+  
+  
+  /* --- END: system24 UI logic --- */
+  
+  /* --- START: rawbii pastel overrides --- */
+  
+  /* --- rawbii pastel overrides --- */
+  :root {
     --purple-1: oklch(87% 0.14 320);
     --purple-2: oklch(82% 0.13 320);
     --purple-3: oklch(77% 0.12 320);
     --purple-4: oklch(72% 0.11 320);
     --purple-5: oklch(67% 0.10 320);
-
+  
     --blue-1: oklch(87% 0.14 240);
     --blue-2: oklch(82% 0.13 240);
     --blue-3: oklch(77% 0.12 240);
     --blue-4: oklch(72% 0.11 240);
     --blue-5: oklch(67% 0.10 240);
-}
-
-body {
+  }
+  
+  body {
     --font: 'JetBrains Mono', monospace;
     --code-font: 'JetBrains Mono', monospace;
     --panel-blur: on;
     --blur-amount: 16px;
-    --bg-floating: hsla(260, 20%, 15%, 0.7); /* subtle transparency for floating panels */
-    --background-image: off; /* explicitly disabled */
-    background-color: #1a1a1a; /* charcoal gray fallback */
-}
+    --bg-floating: hsla(260, 20%, 15%, 0.7);
+    --background-image: off;
+    background-color: #1a1a1a;
+  }
+  
+  /* --- END: rawbii pastel overrides --- */
+  
